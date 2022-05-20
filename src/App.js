@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import Switcher from "./components/Switcher";
-
+import NewExpense from "./components/UI/NewExpense/NewExpense";
 // function App() {
 const App = () => {
 
@@ -29,11 +29,9 @@ const App = () => {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <div className="expenses">
-        <Expenses expenses={expenses} />
-        <Switcher />
-      </div>
+      <NewExpense />
+      <Expenses expenses={expenses} />
+      <Switcher />
     </div>
   );
 }
