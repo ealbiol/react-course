@@ -1,6 +1,7 @@
 import "./Card.css"
 
-function Card({ children, cardCSSClass }) {
+// function Card({ children, cardCSSClass }) {
+const Card = ({ children, cardCSSClass }) => {
     const classes = 'card ' + cardCSSClass
 
     return (

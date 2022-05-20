@@ -1,8 +1,8 @@
 import Expenses from "./components/Expenses/Expenses";
 import Switcher from "./components/Switcher";
 
-function App() {
-
+// function App() {
+const App = () => {
 
   const expenses = [
     {

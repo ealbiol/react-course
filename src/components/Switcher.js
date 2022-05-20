@@ -2,7 +2,7 @@ import * as React from "react"
 
 function Switcher() {
 
-    const [boxStatus, setBoxStatus] = React.useState(true)
+    const [boxStatus, setBoxStatus] = React.useState(false)
 
     const handleSwitcher = () => {
         setBoxStatus(!boxStatus)
@@ -10,7 +10,7 @@ function Switcher() {
 
     return (
         <div>
-            <button onClick={handleSwitcher} >Click</button>
+            <button onClick={handleSwitcher}>{boxStatus === true ? "Hide Content" : "Show Content"}</button>
             {
                 boxStatus === true ?
                     <h1>hola</h1>
