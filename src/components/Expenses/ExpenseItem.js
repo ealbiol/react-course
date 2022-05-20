@@ -10,7 +10,9 @@ const ExpenseItem = ({ title, amount, date, id, expenses }) => {
 
     const changeTitleHandler = () => {
         // id === "e1" ? setExpenseTitle(`hola`) : setExpenseTitle("bu")
-        setTimeout(() => setExpenseTitle("Updated!"), 3000)
+        setExpenseTitle("Loading...")
+        setTimeout(() => setExpenseTitle("Updated!"))
+        // setTimeout(() => setExpenseTitle(<b style={{ color: "blue" }}>Updated!</b>), 1000)
         // setExpenseTitle("Updated!")
     }
 
