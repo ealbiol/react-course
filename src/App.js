@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import MultipleSwitcherToggle from "./components/MultipleSwitcherToggle";
+import MultipleSwitcher from "./components/MultipleSwitcher";
 import Switcher from "./components/Switcher";
 import NewExpense from "./components/UI/NewExpense/NewExpense";
 // function App() {
@@ -34,6 +35,8 @@ const App = () => {
       <Expenses expenses={expenses} />
       <Switcher />
       <MultipleSwitcherToggle />
+      <br />
+      <MultipleSwitcher />
     </div>
   );
 }

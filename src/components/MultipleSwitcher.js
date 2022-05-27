@@ -24,16 +24,23 @@ const buttons = [
 ];
 
 
-const MultipleSwitcherToggle = () => {
+const MultipleSwitcher = () => {
 
-    const [buttonStatus, setButtonStatus] = React.useState(null)
+    const [buttonStatus, setButtonStatus] = React.useState([])
 
     const handleSwitcher = (params) => {
-        console.log("params:--->", params)
-        setButtonStatus(params.id)
-        console.log(buttons)
+        setButtonStatus(
+            previousButtonStatus => {
+                previousButtonStatus.push(params.id)
+                console.log("next", previousButtonStatus)
+                return previousButtonStatus
+            }/* 
+            buttonStatus.push(params.id)*/
+        )
     }
-    console.log("aaaa", buttonStatus)
+
+    console.log('Button baby', buttonStatus)
+
 
     return (
         <div>
@@ -41,18 +48,15 @@ const MultipleSwitcherToggle = () => {
                 buttons.map((button, index) => {
                     return (
                         <div key={index}>
-                            <button
-                                // onClick={handleSwitcher}
-                                onClick={() => handleSwitcher(button)}
-                            >
-                                Button {index} and id: {button.id}
+                            <button onClick={() => handleSwitcher(button)}>
+                                Button {index} {button.id}
                             </button>
                             <div>
                                 {
-                                    button.id === buttonStatus ?
+                                    buttonStatus.includes(button.id) ?
                                         <h1>{button.title}</h1>
                                         :
-                                        ""
+                                        null
                                 }
                             </div>
                         </div>
@@ -63,19 +67,12 @@ const MultipleSwitcherToggle = () => {
     )
 }
 
-export default MultipleSwitcherToggle
+export default MultipleSwitcher
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// {
+//     button.id === buttonStatus ?
+//         <h1>{button.title}</h1>
+//         :
+//         ""
+// }
