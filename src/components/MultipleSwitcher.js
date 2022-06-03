@@ -39,7 +39,7 @@ const MultipleSwitcher = () => {
         )
     }
 
-    console.log('Button baby', buttonStatus)
+    // console.log('Button baby', buttonStatus)
 
 
     return (

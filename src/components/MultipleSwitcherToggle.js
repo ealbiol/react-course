@@ -33,7 +33,7 @@ const MultipleSwitcherToggle = () => {
         setButtonStatus(params.id)
         console.log(buttons)
     }
-    console.log("aaaa", buttonStatus)
+    // console.log("aaaa", buttonStatus)
 
     return (
         <div>
