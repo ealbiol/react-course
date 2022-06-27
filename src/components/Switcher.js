@@ -9,11 +9,11 @@ function Switcher() {
     }
 
     return (
-        <div>
+        <div style={{ textAlign: "center" }}>
             <button onClick={handleSwitcher}>{boxStatus === true ? "Hide Content" : "Show Content"}</button>
             {
                 boxStatus === true ?
-                    <h1>hola</h1>
+                    <h1 style={{ backgroundColor: "salmon" }}>I'm a simple toogle button</h1>
                     :
                     ""
             }
